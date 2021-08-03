@@ -1,8 +1,8 @@
 const { Type } = require('../db');
-
-const {Router} = require('express')
 const { API_POKEMONS_ENDPOINT} = require('../constants')
 const { default: axios } = require("axios");
+const {Router} = require('express')
+
 
 
 const router = Router()
