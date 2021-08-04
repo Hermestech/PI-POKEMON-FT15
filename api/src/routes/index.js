@@ -12,4 +12,8 @@ const router = Router();
 router.use('/pokemons', pokemonRoutes)
 router.use('/types', typeRoutes)
 
+router.get('/', (req, res) => {
+    res.status(200).send('Página de inicio')
+})
+
 module.exports = router;

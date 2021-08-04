@@ -1,22 +1,14 @@
-const { Type } = require('../db');
+const { Pokemon, Type } = require('../db');
 const { API_POKEMONS_ENDPOINT} = require('../constants')
 const { default: axios } = require("axios");
+const {getPokemons} = require('../controllers/pokemons.js')
 const {Router} = require('express')
 
 
 
 const router = Router()
 
-router.get('/', async (req, res, next) => {
-    try{
-        const pokemons = await axios(API_POKEMONS_ENDPOINT)
-        
-        res.status(200).json(pokemons.data)
-
-    }catch(error){
-        console.log(error)
-    }
-})
+router.get('/',getPokemons);
 
 router.get('/:id',(req,res) => {
 
