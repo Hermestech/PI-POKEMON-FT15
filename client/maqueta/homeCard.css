@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.pokemon__container{
+    background-color: yellowgreen;
+    align-self: center;
+    height: 250px;
+    width: 250px;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+.pokemon__container span{
+    padding: 10px;
+}
+.pokemon__container span a {
+    background-color: brown;
+    border-radius: 50%;
+}
+.pokemon__container img{
+    max-width: 100px;
+    margin-left: 50%;
+}
