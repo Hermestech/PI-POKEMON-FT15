@@ -1,9 +1,10 @@
 import './App.css';
+import PokemonCards from './modules/pokemonCards';
 
 function App() {
   return (
     <div className="App">
-      <h1>Henry Pokemon</h1>
+      <PokemonCards />
     </div>
   );
 }
