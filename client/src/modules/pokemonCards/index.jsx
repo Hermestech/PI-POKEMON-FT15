@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios  from "axios"
-import {POKEMONS_ENDPOINT, BASE_URL} from "../../constants"
+import { BASE_URL} from "../../constants"
 
 export default function PokemonCards(){
     const [pokemons, setPokemons] = useState([])

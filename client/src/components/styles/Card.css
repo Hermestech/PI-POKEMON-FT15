@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+:root{
+    --main-boton-color: #EDEDED;
+    --main-font-color:white;
+    --main-span-color:#7aeec3;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.pokemon__container{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 250px;
+    margin: 1%;
+    background:radial-gradient(#60efbc, #58d5c9);
+    color: var(--main-boton-color);
+    align-self: center;
+    border-radius: 10%;
+    justify-content: flex-end;
+    
+}
+
+
+.pokemon__container :hover {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.01);
+  }
+
+
+.pokemon__container span
+ {
+    padding: 10px;
+}
+.pokemon__container span a  {
+    padding: 2%;
+    background-color: var(--main-span-color);
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: small;
+
+}
+
+.pokemon__container img{
+    max-width: 100px;
+    margin-left: 50%;
+}
