@@ -13,7 +13,8 @@ export default function PokemonCards(){
         getPokemons();
     }, [])
     return(
-        <div>{pokemons.map((pokemon) => {
+        <div>
+            {pokemons.map((pokemon) => {
            return <div>
                     <p>{pokemon.name}</p>
                     <img src={pokemon.image} alt="imagen de pokemon"/>

@@ -1,6 +1,16 @@
 /*Color de inputs*/
 :root{
-    --main-boton-color: #EDEDED;
-    --main-card-color:#32E0C4;
-    --main-font-color:white;
+    --body-color:#FFFFFF;
+    --body-font-color: black;
+    --body-seconday: #F5F5F5;
+    --buttons-bolor:#F5F5F6;
+    --inputs-color: #F5F5F5;
+    --card-font-color: #ECFAF7;
+    --detail-bar-color: #FB6C6C;
+    --main-card-color:#48D0B0;
+    --secondary-card-color: #61E0C9;
+    --fire-card-color:hsl(0, 95%, 70%);
+    --fire-secondary-card-color: #FC7979;
+    --water-card-color: #76BDFE;
+    --water-secondary-card-color: #6FC1F9;
 }
