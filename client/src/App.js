@@ -1,11 +1,14 @@
+import React from 'react';
 import './App.css';
 // import PokemonCards from './modules/pokemonCards';
 import Card from './components/Card'
+import CardNew  from './pages/CardNew';
+
 function App() {
   return (
-    <div className="App">
-      <Card name="bulbasaur" type1="Grass" type2="Poison"/>
-    </div>
+    <React.Fragment className="App">
+      <CardNew/>
+    </React.Fragment>
   );
 }
 

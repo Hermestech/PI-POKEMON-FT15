@@ -1,0 +1,32 @@
+:root{
+    --main-boton-color: #EDEDED;
+    --main-font-color:white;
+    --main-span-color:#7aeec3;
+}
+body{
+    margin: 0px;
+    color: var(--main-font-color);
+}
+.carousel {
+    margin-top: -13%;
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+}
+.carousel__container{
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom:  10px;
+
+    animation: 2s carousel 0.5s ease-in-out;
+  }
+  @keyframes carousel {
+    0%{
+      transform: translateX(1200px);
+    }
+    100%{
+      transform: translateX(0px);
+    }
+  }
+
