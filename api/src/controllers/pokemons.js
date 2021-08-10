@@ -4,13 +4,10 @@ const {API_POKEMONS_ENDPOINT} = require('../constants');
 const axios = require('axios');
 
 
-<<<<<<< HEAD
-=======
 
 
 
 
->>>>>>> nuevo git
 async function getPokemons(req, res, next) {
 
     if(req.query.name) {
@@ -35,11 +32,8 @@ async function getPokemons(req, res, next) {
             pokemonsPendingPromises.push(axios(`${API_POKEMONS_ENDPOINT}/${i}`));
         }
 
-<<<<<<< HEAD
-=======
         // const pokemonApi = axios.get(API_POKEMONS_ENDPOINT)
 
->>>>>>> nuevo git
         Promise.all(pokemonsPendingPromises)
         .then((pokemon) => {
             let pokemonsArray = pokemon.map((element) => {
@@ -134,11 +128,7 @@ async function getPokemonByName(req, res, next) {
             if (pokemon) {
                 res.send(pokemon);
             } else {
-<<<<<<< HEAD
-                res.status(500).send("Not found!");
-=======
                 res.status(500).send("Pokemon Not found!");
->>>>>>> nuevo git
             }
         })
         .catch((error) => {
@@ -182,11 +172,7 @@ async function createPokemon (req, res, next) {
     })
     .catch((error) => next(error));
 }
-<<<<<<< HEAD
-module.exports={
-=======
 module.exports={ 
->>>>>>> nuevo git
     getPokemons,
     getPokemonById,
     getPokemonByName,
