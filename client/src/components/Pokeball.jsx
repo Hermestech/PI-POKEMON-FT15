@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link}from 'react-router-dom'
+
 import './styles/Pokeball.css'
 class Pokeball extends React.Component{
     render(){
@@ -7,7 +9,7 @@ class Pokeball extends React.Component{
         <div className="center-on-page">
   
             <div className="pokeball">
-            <div className="pokeball__button"></div>
+            <Link className="pokeball__button" to="/pokemons"></Link>
             </div>
         
         </div>

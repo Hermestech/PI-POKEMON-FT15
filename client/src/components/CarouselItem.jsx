@@ -1,16 +1,44 @@
 import React from 'react';
-import pokemon from '../utils/images/imagenPokemon.png'
+import { useState, useEffect } from 'react';
+import axios from 'axios'
+import { BASE_URL } from '../constants';
+
 
 import './styles/CarouselItem.css'
-const CarouselItem=() => (
-    <div className="carousel-item">
-            <span> <h3>Nombre del pokemon</h3></span>
-            <span><a>Grass</a></span>
-            <span><a>Poison</a></span>            
+function  CarouselItem(){
+
+    const [pokemons, setPokemons] = useState([])
+
+    function getPokemons(){
+        return axios.get(BASE_URL)
+        .then((pokemons) => setPokemons(pokemons.data))
+    }
+
+    useEffect(() => {
+        getPokemons();
+    }, [])
+
+    return(
+        <React.Fragment>
+        {pokemons.map((pokemon) => {
+            return <div className="carousel-item">
+            <span> <h3>{pokemon.name}</h3></span>
+            <span><a>{pokemon.type1}</a></span>
+            <span><a>{pokemon.type2}</a></span>
             <figure> 
-                <img src={pokemon} alt="imagen del pokemón"/>
-            </figure>
-     </div>
-);
+                <img src={pokemon.image} alt="imagen del pokemón"/>
+            </figure>    
+        
+            </div>
+        } )}
+        </React.Fragment>
+        
+    )
+}
+
+    
+
+   
+
 
 export default CarouselItem;

@@ -8,7 +8,7 @@ body{
     color: var(--main-font-color);
 }
 .carousel {
-    margin-top: -13%;
+    margin-top: -12.5%;
     width: 100%;
     overflow: scroll;
     padding: 30px;
