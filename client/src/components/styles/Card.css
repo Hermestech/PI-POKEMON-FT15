@@ -18,7 +18,7 @@ body{
 .pokemon__container{
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 300px;
     width: 250px;
     margin: 1%;
     background:radial-gradient(#60efbc, #58d5c9);
