@@ -1,26 +1,19 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios'
-import { BASE_URL } from '../constants';
-
+import { connect } from 'react-redux';
+import * as pokemonActions from '../store/actions/actions'
 
 import './styles/CarouselItem.css'
-function  CarouselItem(){
+class  CarouselItem extends React.Component{
 
-    const [pokemons, setPokemons] = useState([])
-
-    function getPokemons(){
-        return axios.get(BASE_URL)
-        .then((pokemons) => setPokemons(pokemons.data))
+    componentDidMount(){
+        this.props.getPokemons();
     }
 
-    useEffect(() => {
-        getPokemons();
-    }, [])
-
-    return(
+    render(){
+        console.log(this.props.showPokemons)
+        return(
         <React.Fragment>
-        {pokemons.map((pokemon) => {
+        {this.props.showPokemons.map((pokemon) => {
             return <div className="carousel-item">
             <span> <h3>{pokemon.name}</h3></span>
             <span><a>{pokemon.type1}</a></span>
@@ -30,15 +23,17 @@ function  CarouselItem(){
             </figure>    
         
             </div>
-        } )}
+        })};
         </React.Fragment>
-        
-    )
+        )
+    }
 }
 
     
-
+const mapStateToProps = (reducers) => {
+    return reducers.pokemonReducers;
+}
    
 
 
-export default CarouselItem;
+export default connect (mapStateToProps, pokemonActions)(CarouselItem);
