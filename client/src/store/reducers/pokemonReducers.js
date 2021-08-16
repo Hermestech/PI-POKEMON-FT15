@@ -23,6 +23,30 @@ function reducer (state = initialState, action) {
             return {
                 ...state, showPokemons: action.payload,
             };
+        case GET_POKEMONS_BY_NAME:
+            return{
+                ...state, pokemonByName: action.payload,
+            };
+        case GET_POKEMON_BY_ID:
+            return{
+                ...state, pokemonsById: action.payload,
+            };
+        case CREATE_POKEMON:
+            return {
+                ...state, createPokemon: action.payload,
+            };
+        case GET_TYPES:
+            return{
+                ...state, types: action.payload,
+            };
+        case SORT_POKEMONS:
+            return {
+                ...state, showPokemons: action.payload,
+            };
+        case FILTER_POKEMONS:
+            return {
+                ...state, showPokemons: action.payload,
+            }
     
         default:{
             return state;
